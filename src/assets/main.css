@@ -1,0 +1,179 @@
+html {
+  height: 100%;
+}
+
+body {
+	min-height: 100%;
+  background-color: #121212;
+  color: #6c757d;
+  background-size: 100% 100%;
+  font-family: sans-serif;
+  padding-top: 70px;
+}
+
+body, html{
+    margin:0;
+    padding:0;
+}
+
+/* NAVBAR */ 
+
+.navbar {
+  background-color: #1f1f1f;
+}
+
+.navbar-brand {
+  font-family: sans-serif;
+  padding-bottom: 0!important;
+  color: #FF6114!important;
+  font-size: 30px!important;
+}
+
+.brand-white {
+  color: #fff;
+  font-size: 20px;
+}
+
+/* LOGIN FORM */
+.container {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.btn-primary {
+  background-color:  #FF6114!important;
+  border-color: #FF6114!important;
+  margin-top: 40px!important;
+  padding: 15px;
+}
+
+.input-text {
+  text-align: left;
+  font-size: 18px;
+  color: #6c757d
+}
+
+.sign-up {
+  color: #6c757d;
+  font-size: 18px;
+  margin-bottom: 30px;
+
+}
+
+.sign-up-link {
+  color: #FF6114;
+}
+
+h1 {
+  color: #fff!important;
+}
+
+.login-icon {
+  color: #fff;
+  height: 100px;
+  font-size: 100px;
+  line-height: 100px;
+} 
+
+/* VIDEO GALLERY */
+
+.content {
+  margin-left: 80px;
+}
+
+.video-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.video-gallery .gallery-item {
+  width: 300px;
+  margin: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-gallery .gallery-item img {
+  width: auto;
+}
+
+.video-gallery .gallery-item video {
+  width: 300px;
+}
+
+.gallery-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.gallery-item-details {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.gallery-item-user {
+  margin: 0 20px 0 0;
+}
+
+.user-photo {
+  vertical-align: middle;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.nav-item img{
+  height: 30px;
+  width: 30px;
+}
+
+.gallery-item-caption {
+  font-size: 12px;
+  color: #fff;
+  width: 80%;
+}
+
+.gallery-item-caption h2 {
+  font-weight: bold;
+  font-size: 16px !important;
+}
+
+.gallery-item-tags span{
+  border: 1px solid #999;
+  border-radius: 10px;
+  background-color: #212121;
+  padding: 4px 10px;
+  color: #fff;
+  margin: 0 2px;
+}
+
+.video-item-title {
+  margin-top: 30px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+
+}
+
+.about-box {
+  margin-top: 20px;;
+  width: 60%;
+}
+
+.about-box h2{
+  color:#FF6114;
+  margin-bottom: 15px;
+}
