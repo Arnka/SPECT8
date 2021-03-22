@@ -43,34 +43,35 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
+
 export default {
     props: ['id'],
     data: function() {
         return {
-            event: null
-        }
+            event: null,
+        };
     },
     methods: {
         getData() {
-            //get data from an api
-            //this.id
-            var that = this; 
+            // get data from an api
+            // this.id
+            const that = this;
 
             // Make a request for all events
             axios.get('https://ccdb.dev.vaudience.net/events')
-            .then(function (response) {
+            .then(function(response) {
                 // handle success
-                that.event = response.data
-                console.log(response);
-            })
+                that.event = response.data;
+                // console.log(response);
+            });
 
-        }
+        },
     },
     mounted: function() {
-        this.getData()
-    }
-}
+        this.getData();
+    },
+};
 </script>
 
 <style>

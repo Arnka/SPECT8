@@ -12,86 +12,53 @@
                 Sign up
               </router-link>
             </p>
+        <!-- Form with username and password. I used VeeValidate 2.x to validate input before submitting the form. Invalid field shows the error message -->
         <form name="form" @submit.prevent="handleLogin">
           <div class="form-group">
-          <input
-            v-model="user.email"
-            v-validate="'required'"
-            type="text"
-            class="form-control"
-            name="email"
-            placeholder="Email"
-          />
-          <div
-            v-if="errors.has('email')"
-            class="alert alert-danger"
-            role="alert">
-            Email is required!
-          </div>
-        </div>
-        <div class="form-group">
-          <input
-            v-model="user.password"
-            v-validate="'required'"
-            type="password"
-            class="form-control"
-            name="password"
-            placeholder="Password"
-          />
-          <div
-            v-if="errors.has('password')"
-            class="alert alert-danger"
-            role="alert">
-            Password is required!
-          </div>
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary btn-block" :disabled="loading">
-            <span
-              v-show="loading"
-              class="spinner-border spinner-border-sm"></span>
-            <span>Login</span>
-          </button>
-        </div>
-        <div class="form-group">
-          <div v-if="message" class="alert alert-danger" role="alert">
-            {{ message }}
-          </div>
-        </div>
-          <!-- <p class="input-text">Email address</p>
-          <fieldset class="form-group">
-            <input 
-              class="form-control form-control-lg"
-              type="text"
+            <input
               v-model="user.email"
               v-validate="'required'"
+              type="text"
+              class="form-control"
               name="email"
-              placeholder="">
+              placeholder="Email"
+            />
             <div
               v-if="errors.has('email')"
               class="alert alert-danger"
               role="alert">
-            Email is required!
-          </div> 
-          </fieldset>
-          <p class="input-text">Password</p>
-          <fieldset class="form-group">
-            <input 
-              class="form-control form-control-lg" 
-              type="password"
+              Email is required!
+            </div>
+          </div>
+          <div class="form-group">
+            <input
               v-model="user.password"
               v-validate="'required'"
+              type="password"
+              class="form-control"
               name="password"
-              placeholder="">
-          </fieldset>
-            <button @click="login()" class="btn btn-lg btn-primary btn-block">
-              LOG IN
-            </button>
-            <div class="form-group">
-          <div v-if="message" class="alert alert-danger" role="alert">
-            {{ message }}
+              placeholder="Password"
+            />
+            <div
+              v-if="errors.has('password')"
+              class="alert alert-danger"
+              role="alert">
+              Password is required!
             </div>
-          </div> -->
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" :disabled="loading">
+              <span
+                v-show="loading"
+                class="spinner-border spinner-border-sm"></span>
+              <span>Login</span>
+            </button>
+          </div>
+          <div class="form-group">
+            <div v-if="message" class="alert alert-danger" role="alert">
+              {{ message }}
+            </div>
+          </div>
         </form>
       </div>
     </div>
@@ -116,6 +83,7 @@ export default class Login extends Vue {
   @Auth.Action
   private login!: (data: any) => Promise<any>;
 
+ //If the status is true, using Vue Router we direct user to Video Page
   created() {
     if (this.isLoggedIn) {
       this.$router.push("/videos");
@@ -138,7 +106,7 @@ export default class Login extends Vue {
           (error) => {
             this.loading = false;
             this.message = error;
-          }
+          },
         );
       }
     });

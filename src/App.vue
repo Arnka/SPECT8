@@ -4,17 +4,11 @@
       <a class="navbar-brand" href="#">SPECT8<span class="brand-white">.live</span></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <!-- <li class="nav-item">
-                  <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="User Photo" class="user-photo">
-              </li> -->
               <li class="nav-item">
                 <router-link v-if="currentUser" to="/user" class="nav-link">
                   <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="User Photo" class="user-photo">
                 </router-link>
               </li>
-              <!--<li class="nav-item">
-                  <a class="nav-link" href="javascript:;">{{ currentUser.email }}</a>
-              </li>-->
               <div v-if="currentUser" class="navbar-nav ml-auto">
               <li class="nav-item">
                 <router-link to="/videos" class="nav-link">
@@ -44,7 +38,6 @@
 import { Vue, Component } from 'vue-property-decorator';
 import { namespace } from "vuex-class";
 const Auth = namespace("Auth");
-//import AppNavbar from './components/AppNavbar.vue';
 
 @Component
 export default class App extends Vue {
@@ -62,6 +55,7 @@ export default class App extends Vue {
 </script>
 
 <style>
+
 /* Side nav */
 
 #icon-bar {
