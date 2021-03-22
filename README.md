@@ -5,7 +5,7 @@ This codebase was created to demonstrate a very basic streaming platform built w
 
 [Links](http://localhost/)
 
-![APP Demo](https://media.giphy.com/media/ZR7ardRYvoXLMpUAOY/giphy.gif)
+![APP Demo](https://media.giphy.com/media/LWoN5ZqasDdGCS2XdJ/giphy.gif)
 
 Since I didn’t have experience with JavaScript frameworks, Vue.js was perfect from the start. Detailed Vue.js documentation helped me a lot. With basic knowledge of HTML and JavaScript I was able to take advantage of Vue.js in no time thanks to step by step guides.
 
